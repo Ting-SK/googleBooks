@@ -1,0 +1,1 @@
+export { NameData } from "./NameData";
