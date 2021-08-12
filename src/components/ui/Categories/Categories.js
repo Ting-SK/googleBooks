@@ -4,24 +4,24 @@ import { NameData } from "../NameData";
 import { CategoriesWrapper } from "./styles";
 
 export const Categories = () => {
-  const {categories, setCategories} = useAppContext();
+  const {getCategories, setCategories} = useAppContext();
   const onChangeCategories = (e) => {
     setCategories(e.target.value);
   };
-  console.log("categories", categories);
+  console.log("categories", getCategories);
   return (
     <CategoriesWrapper>
       <NameData for="categories">Categories</NameData>
-      <select value={categories} onChange={onChangeCategories}>
-        <option value="all" >
+      <select value={getCategories} onChange={onChangeCategories}>
+        <option value="" >
           all
         </option>
-        <option value="art">art</option>
-        <option value="biography">biography</option>
-        <option value="computers">computers</option>
-        <option value="history">history</option>
-        <option value="medical">medical</option>
-        <option value="poetry">poetry</option>
+        <option value="Art">art</option>
+        <option value="Biography">biography</option>
+        <option value="Computers">computers</option>
+        <option value="History">history</option>
+        <option value="Medical">medical</option>
+        <option value="Poetry">poetry</option>
       </select>
     </CategoriesWrapper>
   );

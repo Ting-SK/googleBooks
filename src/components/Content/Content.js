@@ -10,11 +10,7 @@ export const Content = () => {
   const [booksData, isLoading, error] = useShowBooks(book);
   return (
     <ContentWrapper>
-      <Title>
-        {booksData.totalItems > 0
-          ? `Found ${booksData?.totalItems} results`
-          : "Введите название книги"}
-      </Title>
+      <Title>Found {booksData?.totalItems} results</Title>
       {isLoading && <LoadingOutlined style={{ fontSize: "36px" }} />}
       {error && <Title>Что то не так</Title>}
       <ResultSearch booksData={booksData} />

@@ -1,6 +1,6 @@
 import React from "react";
 import { Filters } from "../Filters/Filters";
-import { SearchBar } from "../SearchBar/SearchBar";
+import {SearchBar} from '../../SearchBar'
 import { HeaderWrapper, TitleHead } from "./styles";
 
 export const Header = () => {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Media} from '../../../lib/Theme'
+import {Media} from '../../lib/Theme'
 
 export const Input = styled.input`
   width: 400px;

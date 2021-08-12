@@ -1,5 +1,6 @@
 import React from "react";
-import { useAppContext } from "../../../core/context";
+import { generatePath } from "react-router-dom";
+import { useAppContext } from "../../core/context";
 import { Form, Input } from "./styles";
 
 export const SearchBar = () => {
@@ -10,7 +11,8 @@ export const SearchBar = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     setBook(value);
-    setValue('')
+    // setValue('')
+    generatePath("")
   };
   console.log("value", value);
   console.log("book", book);
