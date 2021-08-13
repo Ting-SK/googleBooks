@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 export const Books = ({ item }) => {
   return (
-    <Link to="/book">
+    <Link to={`/book/${item.id}`}>
       <Bookswrapper>
-        <BooksPic src={item.volumeInfo.imageLinks.smallThumbnail} />
+        <BooksPic src={item.volumeInfo.imageLinks?.smallThumbnail} />
         <div>
           <SubTitle isDecorate>{item.volumeInfo.categories}</SubTitle>
           <Title>{item.volumeInfo.title}</Title>

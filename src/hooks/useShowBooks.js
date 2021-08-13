@@ -12,7 +12,7 @@ export const useShowBooks = (book) => {
     setError(null);
     setIsLoading(true);
     fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${book}+subject:${getCategories}&orderBy=${sorting}&${API_KEY}`
+      `https://www.googleapis.com/books/v1/volumes?q=${book}+subject:${getCategories}&maxResults=40&orderBy=${sorting}&${API_KEY}`
     )
       .then((response) => response.json())
       .then((result) => {

@@ -15,7 +15,7 @@ export const App = () => {
         <Route exact path="/">
           <Content />
         </Route>
-        <Route path="/book">
+        <Route path="/book/:id">
           <BooksFound />
         </Route>
       </Switch>

@@ -1,9 +1,11 @@
 import React from "react";
-import { generatePath } from "react-router-dom";
+import { generatePath, useHistory } from "react-router-dom";
 import { useAppContext } from "../../core/context";
 import { Form, Input } from "./styles";
 
 export const SearchBar = () => {
+  let history = useHistory();
+  console.log('history', history)
   const { value, setValue, setBook, book } = useAppContext();
   const onChange = (e) => {
     setValue(e.target.value.trim());
@@ -11,8 +13,7 @@ export const SearchBar = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     setBook(value);
-    // setValue('')
-    generatePath("")
+    history.push("/")
   };
   console.log("value", value);
   console.log("book", book);

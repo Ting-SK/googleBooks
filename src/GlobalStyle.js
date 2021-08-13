@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
    padding: 0;
    list-style: none;
    text-decoration: none;
+   height: 100vh;
  }
  li{
    list-style: none;
