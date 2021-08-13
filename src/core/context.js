@@ -7,8 +7,8 @@ export const AppProvider = (props) => {
   const [sorting, setSorting] = useState("relevance");
   const [getCategories, setCategories] = useState("");
   const [book, setBook] = useState("");
-  const [choosenBook, setChoosenBook] = useState("");
-
+  const [bookId, setBookId] = useState("");
+  
   let values = {
     value,
     setValue,
@@ -18,8 +18,8 @@ export const AppProvider = (props) => {
     setCategories,
     book,
     setBook,
-    choosenBook,
-    setChoosenBook,
+    bookId,
+    setBookId,
   };
   return (
     <AppContext.Provider value={values}>{props.children}</AppContext.Provider>

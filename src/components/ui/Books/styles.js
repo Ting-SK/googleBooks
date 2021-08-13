@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Media } from "../../../lib/Theme";
 
-export const BooksFound = styled.li`
+export const Bookswrapper = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
