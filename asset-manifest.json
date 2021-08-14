@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/googleBooks/static/js/main.e8bf0809.chunk.js",
+    "main.js.map": "/googleBooks/static/js/main.e8bf0809.chunk.js.map",
+    "runtime-main.js": "/googleBooks/static/js/runtime-main.1b14de8f.js",
+    "runtime-main.js.map": "/googleBooks/static/js/runtime-main.1b14de8f.js.map",
+    "static/js/2.1cb10052.chunk.js": "/googleBooks/static/js/2.1cb10052.chunk.js",
+    "static/js/2.1cb10052.chunk.js.map": "/googleBooks/static/js/2.1cb10052.chunk.js.map",
+    "index.html": "/googleBooks/index.html",
+    "static/js/2.1cb10052.chunk.js.LICENSE.txt": "/googleBooks/static/js/2.1cb10052.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b14de8f.js",
+    "static/js/2.1cb10052.chunk.js",
+    "static/js/main.e8bf0809.chunk.js"
+  ]
+}
