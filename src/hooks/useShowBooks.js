@@ -1,26 +1,29 @@
 import { useEffect, useState } from "react";
-import { useAppContext } from "../core/context";
+import { useSelector } from "react-redux";
 
-export const useShowBooks = (book) => {
-  const { getCategories, sorting } = useAppContext();
-  const [booksData, setBooksData] = useState("");
+export const useShowBooks = (bookName) => {
+  const categories = useSelector((state) => state.categories.categories);
+  const sorting = useSelector((state) => state.sorting.sorting);
+  const pageIndex = useSelector((state) => state.pageIndex.pageIndex);
+  const [booksData, setBooksData] = useState(" ");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+
   const API_KEY = "AIzaSyBTHqvVcB27BfnbQBQDxEtjcQnqI75jS1Y";
 
   useEffect(() => {
     setError(null);
     setIsLoading(true);
     fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${book}+subject:${getCategories}&maxResults=40&orderBy=${sorting}&${API_KEY}`
+      `https://www.googleapis.com/books/v1/volumes?q=${bookName}+subject:${categories}&startIndex=${pageIndex}&maxResults=40&orderBy=${sorting}&${API_KEY}`
     )
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
         setBooksData(result);
+        console.log("results", result);
         setIsLoading(false);
       })
       .catch((error) => setError(error));
-  }, [book, getCategories, sorting]);
+  }, [bookName, categories, sorting, pageIndex]);
   return [booksData, isLoading, error];
 };

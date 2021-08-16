@@ -1,14 +1,16 @@
 import React from "react";
-import { useAppContext } from "../../../core/context";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { changeSorting } from "../../../store/sortingReducer";
 import { NameData } from "../NameData";
 import { SortingWrapper } from "./styles";
 
 export const Sorting = () => {
-  const {sorting, setSorting} = useAppContext()
+  const dispatch = useDispatch();
+  const sorting = useSelector((state) => state.sorting.sorting);
   const onChangeSorting = (e) => {
-    setSorting(e.target.value);
+    dispatch(changeSorting(e.target.value));
   };
-  console.log("sorting", sorting);
   return (
     <SortingWrapper>
       <NameData for="sorting">Sorting by</NameData>

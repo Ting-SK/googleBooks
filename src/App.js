@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Content } from "./components/Content";
-import { Books } from "./components/ui/Books";
 import { BooksFound } from "./components/ui/BooksFound";
 import { Header } from "./components/ui/Header";
 import { GlobalStyle } from "./GlobalStyle";

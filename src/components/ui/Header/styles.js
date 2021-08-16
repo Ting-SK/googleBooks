@@ -14,7 +14,8 @@ export const HeaderWrapper = styled.header`
 export const TitleHead = styled.h2`
   font-size: 36px;
   font-weight: bold;
-  ${Media.mobile}{
+  color: #fff;
+  ${Media.mobile} {
     font-size: 24px;
   }
 `;

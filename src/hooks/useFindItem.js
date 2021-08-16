@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useAppContext } from "../core/context";
-import { useShowBooks } from "./useShowBooks";
+import { useEffect, useState } from "react";
 
 export const useFindItem = (idFinded) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [findItem, setFindItem] = useState("");
   const API_KEY = "AIzaSyBTHqvVcB27BfnbQBQDxEtjcQnqI75jS1Y";
-  
+
   useEffect(() => {
     setError(null);
     setIsLoading(true);

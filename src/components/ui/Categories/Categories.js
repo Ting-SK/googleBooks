@@ -1,21 +1,20 @@
 import React from "react";
-import { useAppContext } from "../../../core/context";
+import { useDispatch, useSelector } from "react-redux";
+import { changeCategories } from "../../../store/categoriesReducer";
 import { NameData } from "../NameData";
 import { CategoriesWrapper } from "./styles";
 
 export const Categories = () => {
-  const {getCategories, setCategories} = useAppContext();
+  const dispatch = useDispatch();
+  const categories = useSelector((state) => state.categories.categories);
   const onChangeCategories = (e) => {
-    setCategories(e.target.value);
+    dispatch(changeCategories(e.target.value));
   };
-  console.log("categories", getCategories);
   return (
     <CategoriesWrapper>
       <NameData for="categories">Categories</NameData>
-      <select value={getCategories} onChange={onChangeCategories}>
-        <option value="" >
-          all
-        </option>
+      <select value={categories} onChange={onChangeCategories}>
+        <option value="">all</option>
         <option value="Art">art</option>
         <option value="Biography">biography</option>
         <option value="Computers">computers</option>

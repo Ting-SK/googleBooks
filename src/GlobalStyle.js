@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
  * {  
-	border: none;  
+	 border: none;  
    outline: none;
 	}  
  body {
@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
    list-style: none;
    text-decoration: none;
    height: 100vh;
+   min-width: 320px;
  }
  li{
    list-style: none;

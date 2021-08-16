@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Media } from "../../../lib/Theme";
 
 export const ResultSearchWrapper = styled.ul`
   display: flex;

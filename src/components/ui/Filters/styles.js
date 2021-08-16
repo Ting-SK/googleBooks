@@ -7,6 +7,7 @@ export const FiltersWrapper = styled.section`
   justify-content: space-around;
   align-items: center;
   width: 440px;
+  color: #000;
   ${Media.mobile} {
     flex-direction: column;
     justify-content: space-around;
