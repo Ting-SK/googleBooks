@@ -1,9 +1,7 @@
-import { LoadingOutlined, DoubleLeftOutlined } from "@ant-design/icons";
+import {  DoubleLeftOutlined } from "@ant-design/icons";
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-// import { useAppContext } from "../../../core/context";
 import { useFindItem } from "../../../hooks/useFindItem";
-import { Title } from "../Title";
 import {
   About,
   BooksFoundWrapper,
@@ -13,7 +11,6 @@ import {
 } from "./styles";
 
 export const BooksFound = () => {
-  // let { isLoading, error } = useAppContext();
   let idFinded = useParams().id;
   let [findItem] = useFindItem(idFinded);
   return (
@@ -27,7 +24,7 @@ export const BooksFound = () => {
             {" "}
             <DoubleLeftOutlined
               style={{ marginRight: "10px", fontSize: "20px" }}
-            />
+            /><span>Назад</span>
           </Link>
           {findItem?.volumeInfo?.categories}
         </About>

@@ -15,8 +15,13 @@ export const Content = () => {
   const pageIndex = useSelector((state) => state.pageIndex.pageIndex);
   const bookName = useSelector((state) => state.bookName.bookName);
   const [booksData, isLoading, error] = useShowBooks(bookName);
+  const totalItems = booksData?.totalItems;
   const onChangeIndex = (current) => {
-    dispatch(changePageIndex(current * 40));
+    if (totalItems % 40 === 0) {
+      dispatch(changePageIndex(current * 40));
+    } else {
+      dispatch(changePageIndex((current - 1) * 40));
+    }
   };
   return (
     <>

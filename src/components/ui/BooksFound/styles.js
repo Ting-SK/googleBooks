@@ -1,11 +1,15 @@
 import styled from "styled-components";
+import { Media } from "../../../lib/Theme";
 
 export const BooksFoundWrapper = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
-  min-height: 325px;
+  min-height: 600px;
+  ${Media.mobile} {
+    min-height: 325px;
+  }
 `;
 export const PicContainer = styled.div`
   display: flex;

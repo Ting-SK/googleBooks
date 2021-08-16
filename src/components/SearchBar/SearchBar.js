@@ -3,7 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { changeBookName } from "../../store/bookNameReducer";
 import { changeValue } from "../../store/valueReducer";
-import { Form, Input } from "./styles";
+import {
+  Form,
+  Input,
+  FindBtn,
+  FindBtnContainerBottom,
+  FindBtnContainerTop,
+} from "./styles";
 
 export const SearchBar = () => {
   const dispatch = useDispatch();
@@ -23,6 +29,11 @@ export const SearchBar = () => {
   return (
     <Form onSubmit={onSubmit}>
       <Input value={value} onChange={onChange} />
+      <FindBtnContainerTop>
+        <FindBtnContainerBottom>
+          <FindBtn>Найти</FindBtn>
+        </FindBtnContainerBottom>
+      </FindBtnContainerTop>
     </Form>
   );
 };
