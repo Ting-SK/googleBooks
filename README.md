@@ -2,7 +2,6 @@
 # Тестовое задание на вакансию Программист (FrontEnd)
 ## Задание
 
-## Available Scripts
 Необходимо разработать React-приложение поиска книг с помощью Google Books API. Документация: https://developers.google.com/books/docs/v1/using. Для авторизации запросов к API выбрать способ с предоставлением API key (https://developers.google.com/books/docs/v1/using#APIKey).
 
 __Функционал__
@@ -29,7 +28,6 @@ __Функционал__
 ## Команды для скриптов
 В папке проекта вы можете запустить:
 ### `npm start`
-  
   
 ### `npm test`
 Запускает приложение в режиме разработки. \
