@@ -20,7 +20,6 @@ export const useShowBooks = (bookName) => {
       .then((response) => response.json())
       .then((result) => {
         setBooksData(result);
-        console.log("results", result);
         setIsLoading(false);
       })
       .catch((error) => setError(error));
